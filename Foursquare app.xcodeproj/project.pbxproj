@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		460A37C628A7D5B700206AE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A37C528A7D5B700206AE0 /* AppDelegate.swift */; };
+		460A37C828A7D5B700206AE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A37C728A7D5B700206AE0 /* SceneDelegate.swift */; };
+		460A37CD28A7D5B700206AE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460A37CB28A7D5B700206AE0 /* Main.storyboard */; };
+		460A37D028A7D5B700206AE0 /* Foursquare_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 460A37CE28A7D5B700206AE0 /* Foursquare_app.xcdatamodeld */; };
+		460A37D228A7D5B900206AE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 460A37D128A7D5B900206AE0 /* Assets.xcassets */; };
+		460A37D528A7D5BA00206AE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460A37D328A7D5B900206AE0 /* LaunchScreen.storyboard */; };
+		460A37DD28A7D6D000206AE0 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A37DC28A7D6D000206AE0 /* HomeController.swift */; };
+		460A37DF28A7D6DE00206AE0 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A37DE28A7D6DE00206AE0 /* SearchController.swift */; };
+		460A37E128A7D6FA00206AE0 /* FavoriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A37E028A7D6FA00206AE0 /* FavoriteController.swift */; };
+		460A37E328A814FF00206AE0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A37E228A814FF00206AE0 /* LoginController.swift */; };
+		460A37E528A8150B00206AE0 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A37E428A8150B00206AE0 /* RegisterController.swift */; };
+		460A37E828A8162F00206AE0 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A37E728A8162F00206AE0 /* Login.swift */; };
+		460A37EA28A8164600206AE0 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A37E928A8164600206AE0 /* Register.swift */; };
+		460A37EC28A8165000206AE0 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A37EB28A8165000206AE0 /* Home.swift */; };
+		460A37EE28A8165C00206AE0 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A37ED28A8165C00206AE0 /* Search.swift */; };
+		460A37F028A8166400206AE0 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A37EF28A8166400206AE0 /* Favorite.swift */; };
+		460A37F228A818EA00206AE0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A37F128A818EA00206AE0 /* TabBarController.swift */; };
+		460A37F528A8388C00206AE0 /* FavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A37F428A8388C00206AE0 /* FavoriteCollectionViewCell.swift */; };
+		460A37F728A8389D00206AE0 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A37F628A8389D00206AE0 /* ListCollectionViewCell.swift */; };
+		460A37F928A982FE00206AE0 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A37F828A982FE00206AE0 /* SearchTableViewCell.swift */; };
+		460A37FC28A9878F00206AE0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A37FB28A9878F00206AE0 /* CardView.swift */; };
+		460A37FE28A989CC00206AE0 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A37FD28A989CC00206AE0 /* CardViewController.swift */; };
+		460A385228ADA5F000206AE0 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A385128ADA5F000206AE0 /* FavoriteCell.swift */; };
+		460A385528AE983C00206AE0 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A385428AE983C00206AE0 /* ModelView.swift */; };
+		EC046486950C6EBA51DE643B /* Pods_Foursquare_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961B1D1B1FCB7DEF11FB2548 /* Pods_Foursquare_app.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		460A37C228A7D5B700206AE0 /* Foursquare app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Foursquare app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		460A37C528A7D5B700206AE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		460A37C728A7D5B700206AE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		460A37CC28A7D5B700206AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		460A37CF28A7D5B700206AE0 /* Foursquare_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Foursquare_app.xcdatamodel; sourceTree = "<group>"; };
+		460A37D128A7D5B900206AE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		460A37D428A7D5B900206AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		460A37D628A7D5BA00206AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		460A37DC28A7D6D000206AE0 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		460A37DE28A7D6DE00206AE0 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		460A37E028A7D6FA00206AE0 /* FavoriteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteController.swift; sourceTree = "<group>"; };
+		460A37E228A814FF00206AE0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		460A37E428A8150B00206AE0 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		460A37E728A8162F00206AE0 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		460A37E928A8164600206AE0 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		460A37EB28A8165000206AE0 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		460A37ED28A8165C00206AE0 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		460A37EF28A8166400206AE0 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		460A37F128A818EA00206AE0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		460A37F428A8388C00206AE0 /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
+		460A37F628A8389D00206AE0 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
+		460A37F828A982FE00206AE0 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		460A37FB28A9878F00206AE0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		460A37FD28A989CC00206AE0 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		460A385128ADA5F000206AE0 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		460A385428AE983C00206AE0 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
+		4CE35B83E2601C76BA573702 /* Pods-Foursquare app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare app.debug.xcconfig"; path = "Target Support Files/Pods-Foursquare app/Pods-Foursquare app.debug.xcconfig"; sourceTree = "<group>"; };
+		961B1D1B1FCB7DEF11FB2548 /* Pods_Foursquare_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foursquare_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC7874913250E74F13A83AF6 /* Pods-Foursquare app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare app.release.xcconfig"; path = "Target Support Files/Pods-Foursquare app/Pods-Foursquare app.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		460A37BF28A7D5B700206AE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC046486950C6EBA51DE643B /* Pods_Foursquare_app.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		460A37B928A7D5B700206AE0 = {
+			isa = PBXGroup;
+			children = (
+				460A37C428A7D5B700206AE0 /* Foursquare app */,
+				460A37C328A7D5B700206AE0 /* Products */,
+				E8BC7F3AE98BC37ED81F38A8 /* Pods */,
+				95047430A83C2C4C3F904F19 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		460A37C328A7D5B700206AE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				460A37C228A7D5B700206AE0 /* Foursquare app.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		460A37C428A7D5B700206AE0 /* Foursquare app */ = {
+			isa = PBXGroup;
+			children = (
+				460A37C528A7D5B700206AE0 /* AppDelegate.swift */,
+				460A37C728A7D5B700206AE0 /* SceneDelegate.swift */,
+				460A384A28AC37A200206AE0 /* Home vc */,
+				460A384C28AC37CC00206AE0 /* Favorite vc */,
+				460A384B28AC37B400206AE0 /* Search vc */,
+				460A384F28AC37E500206AE0 /* TabBar vc */,
+				460A384E28AC37DE00206AE0 /* Register vc */,
+				460A384D28AC37D700206AE0 /* Login vc */,
+				460A385028AC382100206AE0 /* Card View vc */,
+				460A37F328A8386900206AE0 /* Cell */,
+				460A385328AE981900206AE0 /* MVVM */,
+				460A37E628A8162300206AE0 /* Model */,
+				460A37CB28A7D5B700206AE0 /* Main.storyboard */,
+				460A37D128A7D5B900206AE0 /* Assets.xcassets */,
+				460A37D328A7D5B900206AE0 /* LaunchScreen.storyboard */,
+				460A37D628A7D5BA00206AE0 /* Info.plist */,
+				460A37CE28A7D5B700206AE0 /* Foursquare_app.xcdatamodeld */,
+			);
+			path = "Foursquare app";
+			sourceTree = "<group>";
+		};
+		460A37E628A8162300206AE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				460A37E728A8162F00206AE0 /* Login.swift */,
+				460A37E928A8164600206AE0 /* Register.swift */,
+				460A37ED28A8165C00206AE0 /* Search.swift */,
+				460A37EF28A8166400206AE0 /* Favorite.swift */,
+				460A37EB28A8165000206AE0 /* Home.swift */,
+				460A37FA28A9877800206AE0 /* Card View */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		460A37F328A8386900206AE0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				460A37F428A8388C00206AE0 /* FavoriteCollectionViewCell.swift */,
+				460A37F828A982FE00206AE0 /* SearchTableViewCell.swift */,
+				460A37F628A8389D00206AE0 /* ListCollectionViewCell.swift */,
+				460A385128ADA5F000206AE0 /* FavoriteCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		460A37FA28A9877800206AE0 /* Card View */ = {
+			isa = PBXGroup;
+			children = (
+				460A37FB28A9878F00206AE0 /* CardView.swift */,
+			);
+			path = "Card View";
+			sourceTree = "<group>";
+		};
+		460A384A28AC37A200206AE0 /* Home vc */ = {
+			isa = PBXGroup;
+			children = (
+				460A37DC28A7D6D000206AE0 /* HomeController.swift */,
+			);
+			path = "Home vc";
+			sourceTree = "<group>";
+		};
+		460A384B28AC37B400206AE0 /* Search vc */ = {
+			isa = PBXGroup;
+			children = (
+				460A37DE28A7D6DE00206AE0 /* SearchController.swift */,
+			);
+			path = "Search vc";
+			sourceTree = "<group>";
+		};
+		460A384C28AC37CC00206AE0 /* Favorite vc */ = {
+			isa = PBXGroup;
+			children = (
+				460A37E028A7D6FA00206AE0 /* FavoriteController.swift */,
+			);
+			path = "Favorite vc";
+			sourceTree = "<group>";
+		};
+		460A384D28AC37D700206AE0 /* Login vc */ = {
+			isa = PBXGroup;
+			children = (
+				460A37E228A814FF00206AE0 /* LoginController.swift */,
+			);
+			path = "Login vc";
+			sourceTree = "<group>";
+		};
+		460A384E28AC37DE00206AE0 /* Register vc */ = {
+			isa = PBXGroup;
+			children = (
+				460A37E428A8150B00206AE0 /* RegisterController.swift */,
+			);
+			path = "Register vc";
+			sourceTree = "<group>";
+		};
+		460A384F28AC37E500206AE0 /* TabBar vc */ = {
+			isa = PBXGroup;
+			children = (
+				460A37F128A818EA00206AE0 /* TabBarController.swift */,
+			);
+			path = "TabBar vc";
+			sourceTree = "<group>";
+		};
+		460A385028AC382100206AE0 /* Card View vc */ = {
+			isa = PBXGroup;
+			children = (
+				460A37FD28A989CC00206AE0 /* CardViewController.swift */,
+			);
+			path = "Card View vc";
+			sourceTree = "<group>";
+		};
+		460A385328AE981900206AE0 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				460A385428AE983C00206AE0 /* ModelView.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		95047430A83C2C4C3F904F19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				961B1D1B1FCB7DEF11FB2548 /* Pods_Foursquare_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8BC7F3AE98BC37ED81F38A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CE35B83E2601C76BA573702 /* Pods-Foursquare app.debug.xcconfig */,
+				EC7874913250E74F13A83AF6 /* Pods-Foursquare app.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		460A37C128A7D5B700206AE0 /* Foursquare app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 460A37D928A7D5BA00206AE0 /* Build configuration list for PBXNativeTarget "Foursquare app" */;
+			buildPhases = (
+				1FF42533405F4562F5BB6352 /* [CP] Check Pods Manifest.lock */,
+				460A37BE28A7D5B700206AE0 /* Sources */,
+				460A37BF28A7D5B700206AE0 /* Frameworks */,
+				460A37C028A7D5B700206AE0 /* Resources */,
+				CC6B63671FA40DC04E206F98 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Foursquare app";
+			productName = "Foursquare app";
+			productReference = 460A37C228A7D5B700206AE0 /* Foursquare app.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		460A37BA28A7D5B700206AE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					460A37C128A7D5B700206AE0 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 460A37BD28A7D5B700206AE0 /* Build configuration list for PBXProject "Foursquare app" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 460A37B928A7D5B700206AE0;
+			productRefGroup = 460A37C328A7D5B700206AE0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				460A37C128A7D5B700206AE0 /* Foursquare app */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		460A37C028A7D5B700206AE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				460A37D528A7D5BA00206AE0 /* LaunchScreen.storyboard in Resources */,
+				460A37D228A7D5B900206AE0 /* Assets.xcassets in Resources */,
+				460A37CD28A7D5B700206AE0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FF42533405F4562F5BB6352 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Foursquare app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC6B63671FA40DC04E206F98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Foursquare app/Pods-Foursquare app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Foursquare app/Pods-Foursquare app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Foursquare app/Pods-Foursquare app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		460A37BE28A7D5B700206AE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				460A37DD28A7D6D000206AE0 /* HomeController.swift in Sources */,
+				460A37E128A7D6FA00206AE0 /* FavoriteController.swift in Sources */,
+				460A37F028A8166400206AE0 /* Favorite.swift in Sources */,
+				460A37FE28A989CC00206AE0 /* CardViewController.swift in Sources */,
+				460A37DF28A7D6DE00206AE0 /* SearchController.swift in Sources */,
+				460A37F528A8388C00206AE0 /* FavoriteCollectionViewCell.swift in Sources */,
+				460A37EC28A8165000206AE0 /* Home.swift in Sources */,
+				460A37D028A7D5B700206AE0 /* Foursquare_app.xcdatamodeld in Sources */,
+				460A37EA28A8164600206AE0 /* Register.swift in Sources */,
+				460A37E528A8150B00206AE0 /* RegisterController.swift in Sources */,
+				460A37C628A7D5B700206AE0 /* AppDelegate.swift in Sources */,
+				460A37FC28A9878F00206AE0 /* CardView.swift in Sources */,
+				460A385528AE983C00206AE0 /* ModelView.swift in Sources */,
+				460A37F728A8389D00206AE0 /* ListCollectionViewCell.swift in Sources */,
+				460A37F928A982FE00206AE0 /* SearchTableViewCell.swift in Sources */,
+				460A37E828A8162F00206AE0 /* Login.swift in Sources */,
+				460A37EE28A8165C00206AE0 /* Search.swift in Sources */,
+				460A37F228A818EA00206AE0 /* TabBarController.swift in Sources */,
+				460A385228ADA5F000206AE0 /* FavoriteCell.swift in Sources */,
+				460A37C828A7D5B700206AE0 /* SceneDelegate.swift in Sources */,
+				460A37E328A814FF00206AE0 /* LoginController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		460A37CB28A7D5B700206AE0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				460A37CC28A7D5B700206AE0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		460A37D328A7D5B900206AE0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				460A37D428A7D5B900206AE0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		460A37D728A7D5BA00206AE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		460A37D828A7D5BA00206AE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		460A37DA28A7D5BA00206AE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CE35B83E2601C76BA573702 /* Pods-Foursquare app.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Foursquare app/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rustam.Foursquare-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		460A37DB28A7D5BA00206AE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC7874913250E74F13A83AF6 /* Pods-Foursquare app.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Foursquare app/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rustam.Foursquare-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		460A37BD28A7D5B700206AE0 /* Build configuration list for PBXProject "Foursquare app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				460A37D728A7D5BA00206AE0 /* Debug */,
+				460A37D828A7D5BA00206AE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		460A37D928A7D5BA00206AE0 /* Build configuration list for PBXNativeTarget "Foursquare app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				460A37DA28A7D5BA00206AE0 /* Debug */,
+				460A37DB28A7D5BA00206AE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		460A37CE28A7D5B700206AE0 /* Foursquare_app.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				460A37CF28A7D5B700206AE0 /* Foursquare_app.xcdatamodel */,
+			);
+			currentVersion = 460A37CF28A7D5B700206AE0 /* Foursquare_app.xcdatamodel */;
+			path = Foursquare_app.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 460A37BA28A7D5B700206AE0 /* Project object */;
+}
