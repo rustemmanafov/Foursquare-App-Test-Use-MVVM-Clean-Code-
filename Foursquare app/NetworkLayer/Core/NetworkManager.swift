@@ -5,16 +5,11 @@
 import Foundation
 import Alamofire
 
-enum HTTPMethods: String {
-    case get = "GET"
-    case post = "POST"
-}
-
 class NetworkManager {
     
 static let shared = NetworkManager()
     
-    func request<T: Codable>(type: T.Type, url: String, method: HTTPMethods, complete: @escaping((T) -> ())) {
+    func request<T: Codable>(type: T.Type, url: String, method: HTTPMethods, header: HTTPHeader, complete: @escaping((T) -> ())) {
         
         AF.request(url, method: .get).validate().responseDecodable(of: T.self) { response in
             debugPrint(response)

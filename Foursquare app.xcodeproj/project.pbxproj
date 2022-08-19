@@ -35,6 +35,7 @@
 		460A385E28AE9DD800206AE0 /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A385D28AE9DD800206AE0 /* SearchManager.swift */; };
 		460A386028AE9DE900206AE0 /* FavoriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A385F28AE9DE800206AE0 /* FavoriteManager.swift */; };
 		460A386A28AEEEA300206AE0 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A386928AEEEA300206AE0 /* HomeManager.swift */; };
+		4647CEC328B0285300D13D78 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647CEC228B0285300D13D78 /* NetworkHelper.swift */; };
 		EC046486950C6EBA51DE643B /* Pods_Foursquare_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961B1D1B1FCB7DEF11FB2548 /* Pods_Foursquare_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		460A385D28AE9DD800206AE0 /* SearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
 		460A385F28AE9DE800206AE0 /* FavoriteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteManager.swift; sourceTree = "<group>"; };
 		460A386928AEEEA300206AE0 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
+		4647CEC228B0285300D13D78 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		4CE35B83E2601C76BA573702 /* Pods-Foursquare app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare app.debug.xcconfig"; path = "Target Support Files/Pods-Foursquare app/Pods-Foursquare app.debug.xcconfig"; sourceTree = "<group>"; };
 		961B1D1B1FCB7DEF11FB2548 /* Pods_Foursquare_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foursquare_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7874913250E74F13A83AF6 /* Pods-Foursquare app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare app.release.xcconfig"; path = "Target Support Files/Pods-Foursquare app/Pods-Foursquare app.release.xcconfig"; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				460A385928AE9C1400206AE0 /* NetworkManager.swift */,
+				4647CEC228B0285300D13D78 /* NetworkHelper.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4647CEC328B0285300D13D78 /* NetworkHelper.swift in Sources */,
 				460A37DD28A7D6D000206AE0 /* HomeController.swift in Sources */,
 				460A385E28AE9DD800206AE0 /* SearchManager.swift in Sources */,
 				460A37E128A7D6FA00206AE0 /* FavoriteController.swift in Sources */,

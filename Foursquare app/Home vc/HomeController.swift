@@ -24,11 +24,11 @@ class HomeController: UIViewController {
                 self.favoriteCollectionView.reloadData()
             }
         }
-        viewModel.requestDataById {
-            DispatchQueue.main.async {
-                self.listCollectionView.reloadData()
-            }
-        }
+//        viewModel.requestDataById {
+//            DispatchQueue.main.async {
+//                self.listCollectionView.reloadData()
+//            }
+//        }
     
     }
     

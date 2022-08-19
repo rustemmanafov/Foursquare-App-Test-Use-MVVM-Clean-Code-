@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class SearchManager {
     
@@ -13,16 +14,10 @@ class SearchManager {
     
     func getPhotos(complete: @escaping(([Result]) -> ())) {
         
-        let url = "https://api.foursquare.com/v3/places/search"
-        
-        let headers: HTTPHeaders = [
-            "Accept": "application/json",
-            "Authorization": "fsq3p2t4TjCJa5TV6tE+UXIGooHhPEEY2Kmo4kF9obgDeKA="
-        ]
-        
         NetworkManager.shared.request(type: [Result].self,
-                                      url: url,
-                                      method: .get) { responce in
+                                      url: NetworkHelper.shared.urlConfiguratiom(url: "/v3/places/search"),
+                                      method: .get,
+                                      header: NetworkHelper.shared.headers) { responce in
             complete(responce)
         }
         
