@@ -17,31 +17,14 @@ class ModelView {
     
     var listData: Result?
     var imageData = [Category]()
-    
+
     func requestData(complete: @escaping(() -> ())) {
         
-        let url = "https://api.foursquare.com/v3/places/nearby?II=40.389926,49.830029"
-        
-        let headers: HTTPHeaders = [
-            "Accept": "application/json",
-            "Authorization": "fsq3p2t4TjCJa5TV6tE+UXIGooHhPEEY2Kmo4kF9obgDeKA="
-        ]
-        
-        AF.request(url, method: .get, headers: headers).responseDecodable(of: Welcome.self) { response in
-            switch response.result {
-            case .success(_):
-                guard let responseData = response.value else { return }
-                let photos = responseData.results
-                
-                for photo in photos {
-                    self.list.append(photo)
-                    complete()
-                }
-            case .failure(let error):
-                print(error)
-            }
+        HomeManager.shared.getPhotos { items in
+            self.list = items
+            complete()
         }
-    }
+}
     
     func requestDataById(complete: @escaping(() -> ())) {
         

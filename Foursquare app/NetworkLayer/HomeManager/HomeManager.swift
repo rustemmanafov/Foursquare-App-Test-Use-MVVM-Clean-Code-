@@ -1,19 +1,17 @@
-//
-//  SearchManager.swift
+//  HomeManager.swift
 //  Foursquare app
-//
-//  Created by Rustem Manafov on 18.08.22.
-//
+//  Created by Rustem Manafov on 19.08.22.
 
 import Foundation
+import Alamofire
 
-class SearchManager {
+class HomeManager {
     
-    static let shared = SearchManager()
+    static let shared = HomeManager()
     
     func getPhotos(complete: @escaping(([Result]) -> ())) {
         
-        let url = "https://api.foursquare.com/v3/places/search"
+        let url = "https://api.foursquare.com/v3/places/nearby?II=40.389926,49.830029"
         
         let headers: HTTPHeaders = [
             "Accept": "application/json",
