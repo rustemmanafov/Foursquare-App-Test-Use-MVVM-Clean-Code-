@@ -17,5 +17,4 @@ class HomeManager {
             complete(response.results)
         }
     }
-    
 }

@@ -18,8 +18,5 @@ class FavoriteManager {
                                       method: .get) { responce in
             complete(responce.results)
         }
-        
-        
-        
     }
 }

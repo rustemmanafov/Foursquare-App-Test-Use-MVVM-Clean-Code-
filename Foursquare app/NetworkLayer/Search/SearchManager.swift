@@ -18,8 +18,5 @@ class SearchManager {
                                       method: .get) { responce in
             complete(responce.results)
         }
-        
-        
-        
     }
 }

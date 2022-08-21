@@ -9,29 +9,51 @@ import UIKit
 import SDWebImage
 
 class HomeController: UIViewController, ListCollectionViewCellDelegate {
-   
+    
     let context = AppDelegate().persistentContainer.viewContext
     
     @IBOutlet weak var favoriteCollectionView: UICollectionView!
     @IBOutlet weak var listCollectionView: UICollectionView!
+    
+    var listItems = [List]()
     
     var viewModel = ModelView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.requestData {
-            self.favoriteCollectionView.reloadData()
-        }
+        //        viewModel.requestData {
+        //            self.favoriteCollectionView.reloadData()
+        //        }
         viewModel.requestData {
             self.listCollectionView.reloadData()
         }
     }
     
     func navigate(index: Int) {
-      print("Saved")
+        print("Worked")
+        
+        func fetch() {
+            do {
+                listItems = try context.fetch(List.fetchRequest())
+                listItems.reverse()
+                favoriteCollectionView.reloadData()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        
+        func save(title: String) {
+            let model = List(context: context)
+            model.title = title
+            do {
+                try context.save()
+                fetch()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
-    
 }
 
 extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {

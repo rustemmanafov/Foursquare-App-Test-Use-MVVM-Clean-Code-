@@ -17,5 +17,8 @@ extension List {
     }
 
     @NSManaged public var title: String?
+    @NSManaged public var image: String?
+
+    
 
 }
