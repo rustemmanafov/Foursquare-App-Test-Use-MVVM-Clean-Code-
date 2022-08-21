@@ -7,22 +7,16 @@ import Alamofire
 
 class NetworkManager {
     
-static let shared = NetworkManager()
+    static let shared = NetworkManager()
     
-    func request<T: Codable>(type: T.Type, url: String, method: HTTPMethods, header: HTTPHeader, complete: @escaping((T) -> ())) {
-        
-        AF.request(url, method: .get).validate().responseDecodable(of: T.self) { response in
+    func request<T: Codable>(type: T.Type, url: String, method: HTTPMethods, complete: @escaping((T) -> ())) {
+        AF.request(url,
+                   method: .get,
+                   headers: NetworkHelper.shared.headers).responseDecodable(of: T.self) { response in
             debugPrint(response)
-
             switch response.result {
-            case .success(let photos):
-                guard let responseData = response.value else { return }
-                let photos = responseData.results
-                
-                for photo in photos {
-                    self.list.append(photo)
-                }
-                complete(photos)
+            case .success(let data):
+                complete(data)
             case .failure(let error):
                 print(error)
             }

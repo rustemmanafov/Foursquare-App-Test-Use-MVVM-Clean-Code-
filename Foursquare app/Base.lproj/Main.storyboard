@@ -76,21 +76,21 @@
                                 <rect key="frame" x="0.0" y="232" width="414" height="581"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h8S-nT-GTT">
-                                    <size key="itemSize" width="339" height="266"/>
+                                    <size key="itemSize" width="393" height="267"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ListCollectionViewCell" id="P8n-ge-9sg" customClass="ListCollectionViewCell" customModule="Foursquare_app" customModuleProvider="target">
-                                        <rect key="frame" x="37.5" y="0.0" width="339" height="266"/>
+                                        <rect key="frame" x="10.5" y="0.0" width="393" height="267"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1R2-qB-RNz">
-                                            <rect key="frame" x="0.0" y="0.0" width="339" height="266"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="267"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgf-1F-nXz">
-                                                    <rect key="frame" x="8" y="8" width="323" height="55"/>
+                                                    <rect key="frame" x="8" y="8" width="377" height="55"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="55" id="716-M9-qku"/>
                                                     </constraints>
@@ -99,8 +99,17 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bce-Jc-VRD">
-                                                    <rect key="frame" x="8" y="89.5" width="323" height="168.5"/>
+                                                    <rect key="frame" x="8" y="89.5" width="377" height="169.5"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oN-2b-JA7">
+                                                    <rect key="frame" x="326" y="100" width="47" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="star.fill" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="addToFavorit:" destination="P8n-ge-9sg" eventType="touchUpInside" id="Eah-kg-xFr"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Bce-Jc-VRD" firstAttribute="leading" secondItem="1R2-qB-RNz" secondAttribute="leading" constant="8" id="4Jh-rt-5Ng"/>
@@ -112,7 +121,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="sgf-1F-nXz" secondAttribute="trailing" constant="8" id="wbc-t6-DId"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="339" height="266"/>
+                                        <size key="customSize" width="393" height="267"/>
                                         <connections>
                                             <outlet property="listImage" destination="Bce-Jc-VRD" id="uFl-zr-kvS"/>
                                             <outlet property="listLbl" destination="sgf-1F-nXz" id="nzn-JM-sL6"/>

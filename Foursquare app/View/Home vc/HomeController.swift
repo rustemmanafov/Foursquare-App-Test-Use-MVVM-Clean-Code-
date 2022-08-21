@@ -6,10 +6,11 @@
 //
 
 import UIKit
-import Alamofire
 import SDWebImage
 
-class HomeController: UIViewController {
+class HomeController: UIViewController, ListCollectionViewCellDelegate {
+   
+    let context = AppDelegate().persistentContainer.viewContext
     
     @IBOutlet weak var favoriteCollectionView: UICollectionView!
     @IBOutlet weak var listCollectionView: UICollectionView!
@@ -20,16 +21,15 @@ class HomeController: UIViewController {
         super.viewDidLoad()
         
         viewModel.requestData {
-            DispatchQueue.main.async {
-                self.favoriteCollectionView.reloadData()
-            }
+            self.favoriteCollectionView.reloadData()
         }
-//        viewModel.requestDataById {
-//            DispatchQueue.main.async {
-//                self.listCollectionView.reloadData()
-//            }
-//        }
+        viewModel.requestData {
+            self.listCollectionView.reloadData()
+        }
+    }
     
+    func navigate(index: Int) {
+      print("Saved")
     }
     
 }
@@ -40,7 +40,7 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
         if collectionView == favoriteCollectionView {
             return viewModel.list.count
         } else  {
-            return viewModel.imageData.count
+            return viewModel.list.count
         }
     }
     
@@ -58,12 +58,24 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
             return favoriteCell
         } else {
             let listCell = listCollectionView.dequeueReusableCell(withReuseIdentifier: "ListCollectionViewCell", for: indexPath) as! ListCollectionViewCell
-            listCell.listLbl.text = viewModel.imageData[indexPath.row].name
-            listCell.listImage.backgroundColor = .red
+            listCell.listLbl.text = viewModel.list[indexPath.row].name
+            
+            let a = viewModel.list[indexPath.row].categories.first?.icon.iconPrefix ?? ""
+            let b = viewModel.list[indexPath.row].categories.first?.icon.suffix ?? ""
+            let url = a + "120" + b
+            listCell.listImage.sd_setImage(with: URL(string: url))
+            listCell.listImage.backgroundColor = .blue
+            
+            listCell.delegate = self
+            listCell.tag = indexPath.row
             
             return listCell
         }
         
+    }
+    
+    func addToFavorite(index: Int) {
+        navigate(index: index)
     }
     
 }

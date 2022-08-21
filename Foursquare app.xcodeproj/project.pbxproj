@@ -36,6 +36,9 @@
 		460A386028AE9DE900206AE0 /* FavoriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A385F28AE9DE800206AE0 /* FavoriteManager.swift */; };
 		460A386A28AEEEA300206AE0 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A386928AEEEA300206AE0 /* HomeManager.swift */; };
 		4647CEC328B0285300D13D78 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647CEC228B0285300D13D78 /* NetworkHelper.swift */; };
+		4647CEC828B1048F00D13D78 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647CEC728B1048F00D13D78 /* Place.swift */; };
+		4647CED028B1110E00D13D78 /* List+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647CECE28B1110E00D13D78 /* List+CoreDataClass.swift */; };
+		4647CED128B1110E00D13D78 /* List+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647CECF28B1110E00D13D78 /* List+CoreDataProperties.swift */; };
 		EC046486950C6EBA51DE643B /* Pods_Foursquare_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961B1D1B1FCB7DEF11FB2548 /* Pods_Foursquare_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +74,9 @@
 		460A385F28AE9DE800206AE0 /* FavoriteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteManager.swift; sourceTree = "<group>"; };
 		460A386928AEEEA300206AE0 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
 		4647CEC228B0285300D13D78 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		4647CEC728B1048F00D13D78 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		4647CECE28B1110E00D13D78 /* List+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "List+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4647CECF28B1110E00D13D78 /* List+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "List+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4CE35B83E2601C76BA573702 /* Pods-Foursquare app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare app.debug.xcconfig"; path = "Target Support Files/Pods-Foursquare app/Pods-Foursquare app.debug.xcconfig"; sourceTree = "<group>"; };
 		961B1D1B1FCB7DEF11FB2548 /* Pods_Foursquare_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foursquare_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7874913250E74F13A83AF6 /* Pods-Foursquare app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare app.release.xcconfig"; path = "Target Support Files/Pods-Foursquare app/Pods-Foursquare app.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,17 +117,12 @@
 			children = (
 				460A37C528A7D5B700206AE0 /* AppDelegate.swift */,
 				460A37C728A7D5B700206AE0 /* SceneDelegate.swift */,
+				4647CEC928B10F6E00D13D78 /* CoreData */,
 				460A385628AE9BD200206AE0 /* NetworkLayer */,
-				460A384A28AC37A200206AE0 /* Home vc */,
-				460A384C28AC37CC00206AE0 /* Favorite vc */,
-				460A384B28AC37B400206AE0 /* Search vc */,
-				460A384F28AC37E500206AE0 /* TabBar vc */,
-				460A384E28AC37DE00206AE0 /* Register vc */,
-				460A384D28AC37D700206AE0 /* Login vc */,
-				460A385028AC382100206AE0 /* Card View vc */,
 				460A37F328A8386900206AE0 /* Cell */,
-				460A385328AE981900206AE0 /* MVVM */,
 				460A37E628A8162300206AE0 /* Model */,
+				460A385328AE981900206AE0 /* ViewModel */,
+				4647CEC428B0FC4E00D13D78 /* View */,
 				460A37CB28A7D5B700206AE0 /* Main.storyboard */,
 				460A37D128A7D5B900206AE0 /* Assets.xcassets */,
 				460A37D328A7D5B900206AE0 /* LaunchScreen.storyboard */,
@@ -139,6 +140,7 @@
 				460A37ED28A8165C00206AE0 /* Search.swift */,
 				460A37EF28A8166400206AE0 /* Favorite.swift */,
 				460A37EB28A8165000206AE0 /* Home.swift */,
+				4647CEC728B1048F00D13D78 /* Place.swift */,
 				460A37FA28A9877800206AE0 /* Card View */,
 			);
 			path = Model;
@@ -219,12 +221,12 @@
 			path = "Card View vc";
 			sourceTree = "<group>";
 		};
-		460A385328AE981900206AE0 /* MVVM */ = {
+		460A385328AE981900206AE0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				460A385428AE983C00206AE0 /* ModelView.swift */,
 			);
-			path = MVVM;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		460A385628AE9BD200206AE0 /* NetworkLayer */ = {
@@ -269,6 +271,29 @@
 				460A386928AEEEA300206AE0 /* HomeManager.swift */,
 			);
 			path = HomeManager;
+			sourceTree = "<group>";
+		};
+		4647CEC428B0FC4E00D13D78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				460A384A28AC37A200206AE0 /* Home vc */,
+				460A384C28AC37CC00206AE0 /* Favorite vc */,
+				460A384B28AC37B400206AE0 /* Search vc */,
+				460A384F28AC37E500206AE0 /* TabBar vc */,
+				460A384E28AC37DE00206AE0 /* Register vc */,
+				460A384D28AC37D700206AE0 /* Login vc */,
+				460A385028AC382100206AE0 /* Card View vc */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4647CEC928B10F6E00D13D78 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4647CECE28B1110E00D13D78 /* List+CoreDataClass.swift */,
+				4647CECF28B1110E00D13D78 /* List+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		95047430A83C2C4C3F904F19 /* Frameworks */ = {
@@ -404,12 +429,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4647CEC328B0285300D13D78 /* NetworkHelper.swift in Sources */,
+				4647CED128B1110E00D13D78 /* List+CoreDataProperties.swift in Sources */,
 				460A37DD28A7D6D000206AE0 /* HomeController.swift in Sources */,
 				460A385E28AE9DD800206AE0 /* SearchManager.swift in Sources */,
 				460A37E128A7D6FA00206AE0 /* FavoriteController.swift in Sources */,
 				460A386028AE9DE900206AE0 /* FavoriteManager.swift in Sources */,
 				460A37F028A8166400206AE0 /* Favorite.swift in Sources */,
 				460A37FE28A989CC00206AE0 /* CardViewController.swift in Sources */,
+				4647CED028B1110E00D13D78 /* List+CoreDataClass.swift in Sources */,
 				460A386A28AEEEA300206AE0 /* HomeManager.swift in Sources */,
 				460A385A28AE9C1400206AE0 /* NetworkManager.swift in Sources */,
 				460A37DF28A7D6DE00206AE0 /* SearchController.swift in Sources */,
@@ -427,6 +454,7 @@
 				460A37EE28A8165C00206AE0 /* Search.swift in Sources */,
 				460A37F228A818EA00206AE0 /* TabBarController.swift in Sources */,
 				460A385228ADA5F000206AE0 /* FavoriteCell.swift in Sources */,
+				4647CEC828B1048F00D13D78 /* Place.swift in Sources */,
 				460A37C828A7D5B700206AE0 /* SceneDelegate.swift in Sources */,
 				460A37E328A814FF00206AE0 /* LoginController.swift in Sources */,
 			);

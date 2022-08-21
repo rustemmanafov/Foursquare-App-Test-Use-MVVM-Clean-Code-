@@ -6,19 +6,17 @@
 //
 
 import Foundation
-import Alamofire
 
 class SearchManager {
     
     static let shared = SearchManager()
     
-    func getPhotos(complete: @escaping(([Result]) -> ())) {
+    func getSearch(complete: @escaping(([Result]) -> ())) {
         
-        NetworkManager.shared.request(type: [Result].self,
+        NetworkManager.shared.request(type: Welcome.self,
                                       url: NetworkHelper.shared.urlConfiguratiom(url: "/v3/places/search"),
-                                      method: .get,
-                                      header: NetworkHelper.shared.headers) { responce in
-            complete(responce)
+                                      method: .get) { responce in
+            complete(responce.results)
         }
         
         
