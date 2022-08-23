@@ -28,31 +28,37 @@ class HomeController: UIViewController, ListCollectionViewCellDelegate {
         viewModel.requestData {
             self.listCollectionView.reloadData()
         }
+        fetch()
+    }
+    
+    func fetch() {
+        do {
+            listItems = try context.fetch(List.fetchRequest())
+            listItems.reverse()
+            favoriteCollectionView.reloadData()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func save(title: String, image: String) {
+        let model = List(context: context)
+        model.title = title
+        model.image = image
+        
+        do {
+            try context.save()
+            fetch()
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     func navigate(index: Int) {
         print("Worked")
-        
-        func fetch() {
-            do {
-                listItems = try context.fetch(List.fetchRequest())
-                listItems.reverse()
-                favoriteCollectionView.reloadData()
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-        
-        func save(title: String) {
-            let model = List(context: context)
-            model.title = title
-            do {
-                try context.save()
-                fetch()
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
+        let text = listItems.description
+        save(title: text, image: text)
+
     }
 }
 
@@ -93,12 +99,10 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
             
             return listCell
         }
-        
     }
     
     func addToFavorite(index: Int) {
         navigate(index: index)
     }
-    
 }
 
