@@ -12,6 +12,7 @@ class ModelView {
     // Home vc
     var data: Welcome?
     var list = [Result]()
+    var listItems = [Result]()
     
     // Add favorite in home vc
     var listData: Place?
@@ -45,4 +46,6 @@ class ModelView {
             complete()
         }
     }
+    
+    
 }

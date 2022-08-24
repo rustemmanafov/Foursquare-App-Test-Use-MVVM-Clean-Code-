@@ -16,15 +16,11 @@ class HomeController: UIViewController, ListCollectionViewCellDelegate {
     @IBOutlet weak var listCollectionView: UICollectionView!
     
     var listItems = [List]()
-    
     var viewModel = ModelView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        viewModel.requestData {
-        //            self.favoriteCollectionView.reloadData()
-        //        }
         viewModel.requestData {
             self.listCollectionView.reloadData()
         }
@@ -55,10 +51,8 @@ class HomeController: UIViewController, ListCollectionViewCellDelegate {
     }
     
     func navigate(index: Int) {
-        print("Worked")
-        let text = listItems.description
-        save(title: text, image: text)
-
+      
+        save(title: viewModel.list[index].name ?? "", image: "")
     }
 }
 
@@ -66,7 +60,7 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == favoriteCollectionView {
-            return viewModel.list.count
+            return listItems.count
         } else  {
             return viewModel.list.count
         }
@@ -75,13 +69,17 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == favoriteCollectionView {
             let favoriteCell = favoriteCollectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteCollectionViewCell", for: indexPath) as! FavoriteCollectionViewCell
-            favoriteCell.favoriteLbl.text = viewModel.list[indexPath.row].name
             
-            let a = viewModel.list[indexPath.row].categories.first?.icon.iconPrefix ?? ""
-            let b = viewModel.list[indexPath.row].categories.first?.icon.suffix ?? ""
-            let url = a + "120" + b
-            favoriteCell.favoriteImage.sd_setImage(with: URL(string: url))
-            favoriteCell.favoriteImage.backgroundColor = .blue
+         //   favoriteCell.configure(item: listItems[indexPath.row])
+            
+            favoriteCell.favoriteLbl.text = listItems[indexPath.item].title
+           // favoriteCell.favoriteImage.image = UIImage(named: listItems[indexPath.row].image ?? "")
+            
+//                        let a = viewModel.list[indexPath.row].categories.first?.icon.iconPrefix ?? ""
+//                        let b = viewModel.list[indexPath.row].categories.first?.icon.suffix ?? ""
+//                        let url = a + "120" + b
+//                        favoriteCell.favoriteImage.sd_setImage(with: URL(string: url))
+            favoriteCell.favoriteImage.backgroundColor = .gray
             
             return favoriteCell
         } else {

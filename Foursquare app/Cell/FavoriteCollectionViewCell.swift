@@ -6,6 +6,12 @@
 //
 
 import UIKit
+import SDWebImage
+
+//protocol FavoriteCellProtocol {
+//    var text: String  { get }
+//    var photo: String { get }
+//}
 
 class FavoriteCollectionViewCell: UICollectionViewCell {
     
@@ -17,4 +23,10 @@ class FavoriteCollectionViewCell: UICollectionViewCell {
 
         favoriteImage.layer.cornerRadius = 15
     }
+    
+//    func configure(item: FavoriteCellProtocol) {
+//        favoriteLbl.text = item.text
+//        // Use SDWebImage
+//        favoriteImage.sd_setImage(with: URL(string: item.photo))
+//    }
 }
