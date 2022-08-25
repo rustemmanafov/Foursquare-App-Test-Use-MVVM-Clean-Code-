@@ -37,9 +37,11 @@ class HomeController: UIViewController, ListCollectionViewCellDelegate {
         }
     }
     
-    func save(title: String, image: String) {
+    func save(index: Int) {
+//        save(title: viewModel.list[index].name ?? "", image: "")
+        let image = ""
         let model = List(context: context)
-        model.title = title
+        model.title = viewModel.list[index].name ?? ""
         model.image = image
         
         do {
@@ -48,11 +50,6 @@ class HomeController: UIViewController, ListCollectionViewCellDelegate {
         } catch {
             print(error.localizedDescription)
         }
-    }
-    
-    func navigate(index: Int) {
-      
-        save(title: viewModel.list[index].name ?? "", image: "")
     }
 }
 
@@ -70,7 +67,7 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
         if collectionView == favoriteCollectionView {
             let favoriteCell = favoriteCollectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteCollectionViewCell", for: indexPath) as! FavoriteCollectionViewCell
             
-         //   favoriteCell.configure(item: listItems[indexPath.row])
+            favoriteCell.configure(item: listItems[indexPath.row])
             
             favoriteCell.favoriteLbl.text = listItems[indexPath.item].title
            // favoriteCell.favoriteImage.image = UIImage(named: listItems[indexPath.row].image ?? "")
@@ -100,7 +97,7 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func addToFavorite(index: Int) {
-        navigate(index: index)
+        save(index: index)
     }
 }
 

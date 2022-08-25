@@ -10,6 +10,12 @@ import Foundation
 import CoreData
 
 @objc(List)
-public class List: NSManagedObject {
-
+public class List: NSManagedObject, FavoriteCellProtocol {
+    var text: String {
+        title ?? ""
+    }
+    
+    var photo: String {
+        image ?? ""
+    }
 }
