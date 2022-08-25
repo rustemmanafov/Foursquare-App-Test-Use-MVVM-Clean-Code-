@@ -13,7 +13,7 @@ struct Welcome: Codable {
 }
 
 // MARK: - Result
-struct Result: Codable {
+struct Result: Codable, FavoriteCellProtocol {
     let fsqID: String?
     let categories: [Category]
     let chains: [JSONAny]?
@@ -24,6 +24,14 @@ struct Result: Codable {
     let name: String?
     let relatedPlaces: RelatedPlaces?
     let timezone: Timezone?
+    
+    var text: String {
+        name ?? ""
+    }
+    
+    var photo: String {
+        (categories.first?.icon.iconPrefix ?? "") + "120" + (categories.first?.icon.suffix ?? "") 
+    }
 
     enum CodingKeys: String, CodingKey {
         case fsqID = "fsq_id"
@@ -44,7 +52,7 @@ struct Category: Codable {
 struct Icon: Codable {
     let iconPrefix: String?
     let suffix: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case iconPrefix = "prefix"
         case suffix

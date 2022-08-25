@@ -38,10 +38,9 @@ class HomeController: UIViewController, ListCollectionViewCellDelegate {
     }
     
     func save(index: Int) {
-//        save(title: viewModel.list[index].name ?? "", image: "")
-        let image = ""
+        let image = viewModel.list[index].photo
         let model = List(context: context)
-        model.title = viewModel.list[index].name ?? ""
+        model.title = viewModel.list[index].text
         model.image = image
         
         do {
@@ -68,14 +67,6 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
             let favoriteCell = favoriteCollectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteCollectionViewCell", for: indexPath) as! FavoriteCollectionViewCell
             
             favoriteCell.configure(item: listItems[indexPath.row])
-            
-            favoriteCell.favoriteLbl.text = listItems[indexPath.item].title
-           // favoriteCell.favoriteImage.image = UIImage(named: listItems[indexPath.row].image ?? "")
-            
-//                        let a = viewModel.list[indexPath.row].categories.first?.icon.iconPrefix ?? ""
-//                        let b = viewModel.list[indexPath.row].categories.first?.icon.suffix ?? ""
-//                        let url = a + "120" + b
-//                        favoriteCell.favoriteImage.sd_setImage(with: URL(string: url))
             favoriteCell.favoriteImage.backgroundColor = .gray
             
             return favoriteCell
