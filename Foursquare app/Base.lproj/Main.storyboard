@@ -167,6 +167,9 @@
                             <searchBar contentMode="redraw" placeholder="Enter here..." translatesAutoresizingMaskIntoConstraints="NO" id="WQX-5m-L3v">
                                 <rect key="frame" x="0.0" y="44" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rg4-Vp-CI6" id="uad-ga-dAZ"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1kh-Jb-6kW">
                                 <rect key="frame" x="0.0" y="95" width="414" height="718"/>

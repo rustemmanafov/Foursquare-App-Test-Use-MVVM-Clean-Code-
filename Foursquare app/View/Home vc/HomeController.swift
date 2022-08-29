@@ -27,6 +27,7 @@ class HomeController: UIViewController, ListCollectionViewCellDelegate {
         fetch()
     }
     
+    
     func fetch() {
         do {
             listItems = try context.fetch(List.fetchRequest())
@@ -67,7 +68,7 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
             let favoriteCell = favoriteCollectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteCollectionViewCell", for: indexPath) as! FavoriteCollectionViewCell
             
             favoriteCell.configure(item: listItems[indexPath.row])
-            favoriteCell.favoriteImage.backgroundColor = .gray
+            favoriteCell.favoriteImage.backgroundColor = .brown
             
             return favoriteCell
         } else {

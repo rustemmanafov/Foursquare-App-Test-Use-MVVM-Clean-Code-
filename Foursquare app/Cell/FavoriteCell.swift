@@ -10,4 +10,6 @@ import UIKit
 class FavoriteCell: UICollectionViewCell {
     @IBOutlet weak var favoriteLbl: UILabel!
     @IBOutlet weak var favoriteImg: UIImageView!
+    
+    
 }

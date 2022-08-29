@@ -67,3 +67,11 @@ extension SearchController: UISearchBarDelegate {
 
 }
 
+extension SearchController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.searchArticles(text: searchBar.text ?? "")
+    }
+}
+
+
