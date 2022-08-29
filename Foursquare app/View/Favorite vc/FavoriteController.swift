@@ -14,7 +14,7 @@ class FavoriteController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var viewModel = ModelView()
-    var listItems = [List]()
+    var listItem = [List]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +22,6 @@ class FavoriteController: UIViewController {
         viewModel.requestFavoriteData {
             self.collectionView.reloadData()
         }
-     //   fetch()
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,8 +30,8 @@ class FavoriteController: UIViewController {
     
     func fetch() {
         do {
-            listItems = try context.fetch(List.fetchRequest())
-            listItems.reverse()
+            listItem = try context.fetch(List.fetchRequest())
+            listItem.reverse()
             collectionView.reloadData()
         } catch {
             print(error.localizedDescription)
@@ -44,19 +42,15 @@ class FavoriteController: UIViewController {
 extension FavoriteController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return listItems.count
+        return listItem.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteCell", for: indexPath) as! FavoriteCell
-        cell.favoriteLbl.text = listItems[indexPath.row].title
-        cell.favoriteImg.image = UIImage(named: listItems[indexPath.row].photo)
         
-//        let a = viewModel.listItems[indexPath.row].categories.first?.icon.iconPrefix ?? ""
-//        let b = viewModel.listItems[indexPath.row].categories.first?.icon.suffix ?? ""
-//        let url = a + "120" + b
-//        cell.favoriteImg.sd_setImage(with: URL(string: url))
-        cell.favoriteImg.backgroundColor = .blue
+        cell.configure(item: listItem[indexPath.row])
+        
+        cell.favoriteImg.backgroundColor = .brown
         return cell
     }
     

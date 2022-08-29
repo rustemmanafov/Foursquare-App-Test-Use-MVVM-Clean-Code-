@@ -79,7 +79,7 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
             let b = viewModel.list[indexPath.row].categories.first?.icon.suffix ?? ""
             let url = a + "120" + b
             listCell.listImage.sd_setImage(with: URL(string: url))
-            listCell.listImage.backgroundColor = .blue
+            listCell.listImage.backgroundColor = .brown
             
             listCell.delegate = self
             listCell.tag = indexPath.row

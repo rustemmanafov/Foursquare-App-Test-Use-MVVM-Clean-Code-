@@ -20,13 +20,14 @@ class FavoriteCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
         favoriteImage.layer.cornerRadius = 15
     }
     
     func configure(item: FavoriteCellProtocol) {
         favoriteLbl.text = item.text
-        // Use SDWebImage
         favoriteImage.sd_setImage(with: URL(string: item.photo))
+
     }
 }
+
+

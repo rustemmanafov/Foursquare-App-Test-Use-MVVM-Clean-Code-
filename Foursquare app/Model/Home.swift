@@ -42,14 +42,26 @@ struct Result: Codable, FavoriteCellProtocol {
 }
 
 // MARK: - Category
-struct Category: Codable {
+struct Category: Codable, FavoriteProtocol {
+   
+    
     let id: Int?
     let name: String?
     let icon: Icon
+    
+    var text: String {
+        name ?? ""
+    }
+    
+    var photo: String {
+        (icon.iconPrefix ?? "") + "120" + (icon.suffix ?? "")
+    }
 }
 
 // MARK: - Icon
 struct Icon: Codable {
+  
+    
     let iconPrefix: String?
     let suffix: String?
     

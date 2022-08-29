@@ -46,5 +46,9 @@ class ModelView {
         }
     }
     
-    
+    func searchArticles(text: String) {
+        SearchManager.shared.search(complete: ){ items in
+            self.filteredPlace = items
+        }
+    }
 }
