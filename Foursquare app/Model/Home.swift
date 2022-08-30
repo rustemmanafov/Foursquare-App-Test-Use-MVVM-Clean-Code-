@@ -42,8 +42,7 @@ struct Result: Codable, FavoriteCellProtocol {
 }
 
 // MARK: - Category
-struct Category: Codable, FavoriteProtocol {
-   
+struct Category: Codable, FavoriteCellProtocol {
     
     let id: Int?
     let name: String?

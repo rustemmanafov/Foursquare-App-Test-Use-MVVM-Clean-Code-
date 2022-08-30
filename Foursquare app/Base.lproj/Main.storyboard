@@ -256,7 +256,7 @@
                                     <constraint firstAttribute="height" constant="170" id="icp-cp-gx2"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BAM-bE-qLe" customClass="CardView" customModule="Foursquare_app" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAM-bE-qLe" customClass="CardView" customModule="Foursquare_app" customModuleProvider="target">
                                 <rect key="frame" x="26" y="87" width="382" height="170"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -268,8 +268,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="tO9-T1-TPf" firstAttribute="leading" secondItem="PSR-tn-E8e" secondAttribute="leading" constant="16" id="03V-bX-8iW"/>
+                            <constraint firstItem="BAM-bE-qLe" firstAttribute="leading" secondItem="PSR-tn-E8e" secondAttribute="leading" constant="26" id="0HR-fm-bQf"/>
                             <constraint firstItem="PSR-tn-E8e" firstAttribute="trailing" secondItem="85e-Gw-oQc" secondAttribute="trailing" constant="16" id="0rF-ed-HcM"/>
                             <constraint firstItem="cah-RH-q4K" firstAttribute="top" secondItem="85e-Gw-oQc" secondAttribute="bottom" constant="20" id="BWd-Vl-9Na"/>
+                            <constraint firstItem="PSR-tn-E8e" firstAttribute="trailing" secondItem="BAM-bE-qLe" secondAttribute="trailing" constant="6" id="Ngl-zv-Aih"/>
+                            <constraint firstItem="BAM-bE-qLe" firstAttribute="top" secondItem="PSR-tn-E8e" secondAttribute="top" constant="43" id="Nqu-Na-Eu6"/>
                             <constraint firstItem="85e-Gw-oQc" firstAttribute="leading" secondItem="PSR-tn-E8e" secondAttribute="leading" constant="16" id="RXp-Pg-VM7"/>
                             <constraint firstItem="tO9-T1-TPf" firstAttribute="top" secondItem="PSR-tn-E8e" secondAttribute="top" constant="33" id="TIe-1y-wZ4"/>
                             <constraint firstItem="85e-Gw-oQc" firstAttribute="top" secondItem="tO9-T1-TPf" secondAttribute="bottom" constant="20" id="fRk-X0-Gn4"/>

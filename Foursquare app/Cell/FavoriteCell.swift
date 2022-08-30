@@ -8,17 +8,12 @@
 import UIKit
 import SDWebImage
 
-protocol FavoriteProtocol {
-    var text: String  { get }
-    var photo: String { get }
-}
-
 class FavoriteCell: UICollectionViewCell {
     
     @IBOutlet weak var favoriteLbl: UILabel!
     @IBOutlet weak var favoriteImg: UIImageView!
     
-    func configure(item: FavoriteProtocol) {
+    func configure(item: FavoriteCellProtocol) {
         favoriteLbl.text = item.text
         favoriteImg.sd_setImage(with: URL(string: item.photo))
 
