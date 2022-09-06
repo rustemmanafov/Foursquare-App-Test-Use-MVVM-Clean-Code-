@@ -25,6 +25,8 @@ class HomeController: UIViewController, ListCollectionViewCellDelegate {
             self.listCollectionView.reloadData()
         }
         fetch()
+        
+        title = "Foresquare"
     }
     
     
