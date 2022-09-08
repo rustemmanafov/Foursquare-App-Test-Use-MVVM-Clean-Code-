@@ -63,7 +63,6 @@ extension SearchController: UISearchBarDelegate {
         self.tableView.reloadData()
         
     }
-    
 }
 
 //extension SearchController: UISearchBarDelegate {
